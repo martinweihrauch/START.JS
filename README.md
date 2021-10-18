@@ -1,8 +1,8 @@
 # START.JS
 START.JS - learn programming
 
-START.JS is distributed under the LGPL
-Copyright (c) 2017... by Martin Weihrauch, Germany
+START.JS is distributed under the MIT License
+Copyright (c) 2021 by Dr. Martin Weihrauch, Germany
 
 START.JS is a simple JavaScript framework, which eases the start of learning programming. With START.JS, the learning curve
 is not as steep as without it. With START.JS, you do not need to have knowledge of HTML, CSS to program your first program.
