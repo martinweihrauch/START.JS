@@ -1,14 +1,13 @@
 /**
- * Created by ThinkPad User on 31.12.14.
+ * Created by Dr. Martin Weihrauch
  */
 /*
- *   The pageClass is used to administer and keep track of all the elements which are registered on the specific page
+ *   The pageClass is used to administrate and keep track of all the elements which are registered on the specific page
  */
 
-
-
-function __pageClass(name){
+sj.__Page = function(name){
     this.name = name;
+    this.style = "block";
     this.HTMLItems    = {}; //Array, which will store all informations about the item IDs as objects
     //this.wrapperIDs = new Object(); //Will store all informations about the wrapper IDs of the respective
     $('body').append('<div id="'+name+'"></div>');
@@ -27,6 +26,5 @@ function __pageClass(name){
 
 }
 
-var Page = new __pageClass('startjs_page1');
-Page.style = 'block';
-
+sj.Page = new sj.__Page("page1");
+sj.Page.style=='non'

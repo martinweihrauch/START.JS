@@ -1,8 +1,7 @@
 /**
  * Start.js framework for programming beginners
- * invented by
- * Martin Weihrauch
- * Smart In Media GmbH & Co. KG 2014
+ * invented by Dr. Martin Weihrauch
+ * 
  */
 
 /*
@@ -11,12 +10,16 @@
     The styling should also contain <p>, <h1>, etc
  */
 
-function Text(data){
+var _htmlItems = {
+    Text: {}
+}
+
+sj.Text = function (data){
     var that = this;
     //this.style.that = this;
 
     this.itemID = this.createItemID('Text');
-    this.addToPage('<p id="'+this.itemID+'">'+data+'</p>');
+    this.addToPage('<span id="'+this.itemID+'">'+data+'</span>');
     this.data = function(data){
         if (typeof data === 'undefined'){
             return $('#'+this.itemID).text();
@@ -29,10 +32,10 @@ function Text(data){
 
 }
 
-Text.prototype = new __HTMLItemClass();
+sj.Text.prototype = new sj.__HTMLItemClass();
 
 
-function TextField(label, value){
+sj.TextField = function (label = "", value = ""){
     var that = this;
     this.style.that = this;
     this.itemID = this.createItemID('Textfield');
@@ -40,25 +43,23 @@ function TextField(label, value){
 
 }
 
+sj.TextField.prototype = new sj.__HTMLItemClass();
 
 
-TextField.prototype = new __HTMLItemClass();
-
-
-function PasswordField(){
+sj.PasswordField = function(){
     var that = this;
     this.style.that = this;
 
 }
 
-function TextArea(){
+sj.TextArea = function(){
     var that = this;
     this.style.that = this;
 
 }
 
 
-function Button(label){
+sj.Button = function(label){
     var that = this;
     this.style.that = this;
 
@@ -82,38 +83,21 @@ function Button(label){
         }
 
     });
-
-
 }
 
-Button.prototype = new __HTMLItemClass();
+sj.Button.prototype = new sj.__HTMLItemClass();
 
-function SelectGroup(){
+sj.SelectGroup = function(){
     var that = this;
     this.style.that = this;
-
 }
 
-function CheckboxGroup(){
+sj.CheckboxGroup = function(){
     var that = this;
     this.style.that = this;
-
 }
 
-function RadioGroup(){
+sj.RadioGroup = function(){
     var that = this;
     this.style.that = this;
-
 }
-
-
-
-
-//$(document).ready(function(){
-
-
-//});
-
-
-
-

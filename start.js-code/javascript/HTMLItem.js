@@ -1,9 +1,9 @@
 
 //Parent class item for all elements to be represented for HTML
-function __HTMLItemClass(){
+sj.__HTMLItemClass = function(){
 
     this.createItemID = function(type){
-        return Page.createItemID(type);
+        return sj.Page.createItemID(type);
     }
 
     //Return the element ID (not the CSS ID, but it may be the same)
@@ -30,17 +30,14 @@ function __HTMLItemClass(){
 
     }
 
-    this.style = {};
-    this.style.add = function (cssclass){
-        if($('#l_'+this.that.itemID).length){
-            $('#l_'+this.that.itemID).addClass(cssclass);
-        }
-        $('#'+this.that.itemID).addClass(cssclass);
-
-    }
-
-
     this.style = {
+        add : function (cssclass){
+            if($('#l_'+this.that.itemID).length){
+                $('#l_'+this.that.itemID).addClass(cssclass);
+            }
+            $('#'+this.that.itemID).addClass(cssclass);
+    
+        },
         remove : function(cssclass){
             $('#'+this.itemID).removeClass(cssclass);
         },
@@ -52,17 +49,17 @@ function __HTMLItemClass(){
 
     //Add an item to the page element Page
     this.addToPage = function(htmlstring){
-        if(Page.style=='block'){
-            $('#'+Page.name).append('<div id="'+'w_'+this.itemID+'">'+htmlstring+'</div>');//Append it to the page (container)
+        if(sj.Page.style=='block'){
+            $('#'+sj.Page.name).append('<div id="'+'w_'+this.itemID+'">'+htmlstring+'</div>');//Append it to the page (container)
         }
         else{
-            $('#'+Page.name).append(htmlstring);//Append it to the page (container)
+            $('#'+sj.Page.name).append(htmlstring);//Append it to the page (container)
         }
     }
 
     //Removes an item from the page
     this.remove = function(){
-        if(Page.style=='block'){
+        if(sj.Page.style=='block'){
             $('#w_'+this.itemID).remove();//Remove it from the page (container)
         }
         else{
@@ -144,5 +141,5 @@ function __HTMLItemClass(){
 
 
 /**
- * Created by ThinkPad User on 31.12.14.
+ * Created by Dr. Martin Weihrauch
  */

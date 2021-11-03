@@ -1,12 +1,9 @@
 /**
- * Created by ThinkPad User on 31.12.14.
+ * Created by Dr. Martin Weihrauch
  */
-function SJ(){
-    this.debconsole = function(msg){
+var sj = {
+    debconsole : function(msg){
         console.log(msg);
     }
-
 }
 
-function sj(){}
-sj.prototype = new SJ();
