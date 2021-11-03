@@ -1,8 +1,7 @@
 /**
  * Start.js framework for programming beginners
- * invented by
- * Martin Weihrauch
- * Smart In Media GmbH & Co. KG 2014
+ * invented by Dr. Martin Weihrauch
+ * 
  */
 
 /*
@@ -32,7 +31,7 @@ function Text(data){
 Text.prototype = new __HTMLItemClass();
 
 
-function TextField(label, value){
+function TextField(label = "", value = ""){
     var that = this;
     this.style.that = this;
     this.itemID = this.createItemID('Textfield');
@@ -82,8 +81,6 @@ function Button(label){
         }
 
     });
-
-
 }
 
 Button.prototype = new __HTMLItemClass();
@@ -91,29 +88,14 @@ Button.prototype = new __HTMLItemClass();
 function SelectGroup(){
     var that = this;
     this.style.that = this;
-
 }
 
 function CheckboxGroup(){
     var that = this;
     this.style.that = this;
-
 }
 
 function RadioGroup(){
     var that = this;
     this.style.that = this;
-
 }
-
-
-
-
-//$(document).ready(function(){
-
-
-//});
-
-
-
-
